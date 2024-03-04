@@ -72,6 +72,16 @@
     padding: 20px;
     background: #fff;
     border-radius: 10px;
+
+    /* font-family: 'Dancing Script', cursive;
+    font-weight: 500;
+    font-size: 20px;
+    font-style: normal; */
+
+    font-family: 'Merienda', cursive;
+    font-weight: 500;
+    font-size: 18px;
+    font-style: normal;
 }
 
 .dialog-inner .video {
