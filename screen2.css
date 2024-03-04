@@ -1,0 +1,101 @@
+.screen-2 {
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.letter {
+    position: absolute;
+    background-color: lightcoral;
+    cursor: pointer;
+}
+
+.letter.video {
+    background-color: aqua;
+}
+
+.letter:hover {
+    box-shadow: 0px 0px 52px 0px rgba(255, 255, 255, 0.65);
+}
+
+.rotate1 {
+    animation: rotateAnimation1 8s linear infinite;
+}
+
+.rotate2 {
+    animation: rotateAnimation2 8s linear infinite;
+}
+
+@keyframes rotateAnimation1 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateAnimation2 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.dialog {
+    position: absolute;
+    inset: 0;
+    background: #00000066;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 500ms ease, visibility 0s ease 500ms;
+}
+
+.dialog.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 500ms ease, visibility 0s ease 0s;
+}
+
+.dialog-inner {
+    width: 100%;
+    max-width: 400px;
+    min-height: 300px;
+    margin: 0 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.dialog-inner .video {
+    display: none;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.dialog-inner iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dialog-inner.video {
+    max-width: 1000px;
+    padding: 0;
+    margin: 20px 20px;
+    background: transparent;
+}
+
+.dialog-inner.video .video {
+    display: block;
+}
