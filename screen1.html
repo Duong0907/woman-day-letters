@@ -17,8 +17,12 @@
       rel="stylesheet"
     />
     <style>
-      html,
-      body {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .screen1 {
         height: 100%;
         padding: 0;
         margin: 0;
@@ -48,7 +52,7 @@
         width: 100%;
       }
 
-      canvas {
+      #pinkboard {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -116,17 +120,18 @@
   </head>
 
   <body>
-    <div class="box">
-      <canvas id="pinkboard"></canvas>
-
-      <div
-        id="typewrite"
-        style="display: none"
-        class="typewrite"
-        data-period="1500"
-        data-type='[ "ZaloPay cảm ơn bạn vì những cống hiến, nguồn năng lượng, niềm cảm hứng mà bạn mang đến mỗi ngày.", "Chúc cho một nửa xinh đẹp của thế giới những điều tốt đẹp nhất!", "Happy Women&#39;s Day!"]'
-      >
-        <h1 class="wrap"></h1>
+    <div class="screen1">
+      <div class="box">
+        <canvas id="pinkboard"></canvas>
+        <div
+          id="typewrite"
+          style="display: none"
+          class="typewrite"
+          data-period="1500"
+          data-type='[ "ZaloPay cảm ơn bạn vì những cống hiến, nguồn năng lượng, niềm cảm hứng mà bạn mang đến mỗi ngày.", "Chúc cho một nửa xinh đẹp của thế giới những điều tốt đẹp nhất!", "Happy Women&#39;s Day!"]'
+        >
+          <h1 class="wrap"></h1>
+        </div>
       </div>
     </div>
     <script>
