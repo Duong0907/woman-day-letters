@@ -9,6 +9,8 @@
     position: absolute;
     background-color: lightcoral;
     cursor: pointer;
+    object-fit: cover;
+    object-position: center;
 }
 
 .letter.video {

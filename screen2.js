@@ -35,8 +35,8 @@ const messageQueue = [
     `Chúc các bạn nữ ZaloPay một ngày 8/3 vui vẻ, luôn vui tươi, xinh đẹp và yêu đời như mọi ngày. Mặc kệ những lời đàm tiếu xung quanh, vì em đẹp nhất khi là chính em.`,
 ];
 
-const LETTER_WIDTH = 60;
-const LETTER_HEIGHT = 40;
+const LETTER_WIDTH = 60 * 1.51;
+const LETTER_HEIGHT = 60;
 
 const MAX_VY = 3;
 const MIN_VY = 1.5;
@@ -46,7 +46,8 @@ const TIME_STEP = 800;
 const RENDER_EACH_TIME = 1;
 const MARGIN = 100;
 const NUMBER_OF_VIDEO_LETTER = 5;
-const LETTER_IMAGE = '';
+const LETTER_IMAGE = '/assets/letter1.svg';
+const LETTER_VIDEO_IMAGE = '/assets/letter2.svg';
 const VIDEO_ELEM = `
     <iframe
         width="560"
@@ -83,10 +84,12 @@ function Letter(type = 'message', message, screenWidth, onClick) {
     this.x = getRandomRange(MARGIN, screenWidth - MARGIN);
     this.y = -30;
     this.elem = (() => {
-        const element = document.createElement('div');
+        const element = document.createElement('img');
         element.className = 'letter';
+        element.src = LETTER_IMAGE;
         if (type === 'video') {
             element.classList.add('video');
+            element.src = LETTER_VIDEO_IMAGE;
         }
         if (getRandomRange(-1, 1) > 0) {
             element.classList.add('rotate1');
