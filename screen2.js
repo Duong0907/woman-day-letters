@@ -82,7 +82,7 @@ function Letter(type = 'message', message, screenWidth, onClick) {
     this.vx = getRandomRange(MIN_VX, MAX_VX);
     this.vy = getRandomRange(MIN_VY, MAX_VY);
     this.x = getRandomRange(MARGIN, screenWidth - MARGIN);
-    this.y = -LETTER_HEIGHT;
+    this.y = -LETTER_WIDTH;
     this.elem = (() => {
         const element = document.createElement('img');
         element.className = 'letter';
@@ -167,7 +167,7 @@ window.onload = () => {
                 letterList[i].x - LETTER_WIDTH / 2 + 'px';
             letterList[i].elem.style.top = letterList[i].y + 'px';
 
-            if (letterList[i].y > screenHeight) {
+            if (letterList[i].y > screenHeight + LETTER_HEIGHT) {
                 willRemoveElemIndexs.push(i);
             }
         }
@@ -178,7 +178,7 @@ window.onload = () => {
                 MARGIN,
                 screenWidth - MARGIN
             );
-            letterList[willRemoveElemIndexs[i]].y = -LETTER_HEIGHT;
+            letterList[willRemoveElemIndexs[i]].y = -LETTER_WIDTH;
             letterList.splice(willRemoveElemIndexs[i], 1);
         }
 
