@@ -44,7 +44,7 @@ setTimeout(function () {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
   }, 1500);
-}, 5000);
+}, 3000);
 
 /*
  * RequestAnimationFrame polyfill by Erik Möller
@@ -328,10 +328,10 @@ TxtType.prototype.tick = function () {
   this.el.innerHTML = '<h1 class="wrap">' + this.txt + "</h1>";
 
   var that = this;
-  var delta = 80 - Math.random() * 40;
+  var delta = 60 - Math.random() * 30;
 
   if (this.isDeleting) {
-    delta = 8;
+    delta = 6;
   }
 
   if (!this.isDeleting && this.txt === fullTxt) {

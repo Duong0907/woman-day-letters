@@ -197,4 +197,4 @@ setTimeout(() => {
     window.requestAnimationFrame(run);
   }
   window.requestAnimationFrame(run);
-}, 5000);
+}, 3000);
