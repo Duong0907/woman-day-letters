@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-        </style>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Pacifico&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./screen2.css" />
-    </head>
-    <body>
-        <div class="screen-2" id="screen-2">
-            <div class="dialog" id="dialog">
-                <div class="dialog-inner" id="dialog-inner">
-                    <div class="message"></div>
-                    <div class="video"></div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./screen1.css" />
+    <link rel="stylesheet" href="./screen2.css" />
+  </head>
+  <body>
+    <div class="screen1">
+      <div class="box">
+        <canvas id="pinkboard"></canvas>
+        <div
+          id="typewrite"
+          style="display: none"
+          class="typewrite"
+          data-period="1500"
+          data-type='[ "ZaloPay cảm ơn bạn vì những cống hiến, nguồn năng lượng, niềm cảm hứng mà bạn mang đến mỗi ngày.", "Chúc cho một nửa xinh đẹp của thế giới những điều tốt đẹp nhất!", "Happy Women&#39;s Day!"]'
+        >
+          <h1 class="wrap"></h1>
         </div>
-        <script src="./screen2.js"></script>
-    </body>
+      </div>
+    </div>
+    <div class="screen-2" id="screen-2">
+      <div class="dialog" id="dialog">
+        <div class="dialog-inner" id="dialog-inner">
+          <div class="message"></div>
+          <div class="video"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./screen1.js"></script>
+    <script src="./screen2.js"></script>
+  </body>
 </html>
